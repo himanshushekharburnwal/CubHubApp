@@ -47,9 +47,9 @@
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiSplashScreen Include="Resources\Splash\cubhublogo.jpg" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -60,6 +60,10 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Splash\cubhublogo.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -101,6 +105,10 @@
 	  <MauiXaml Update="Pages\StudyPlannerPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 	</ItemGroup>
 	
 </Project>
