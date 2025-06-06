@@ -11,6 +11,12 @@ namespace CubHubApp
             InitializeComponent();
             var currentTheme = Application.Current!.UserAppTheme;
             ThemeSegmentedControl.SelectedIndex = currentTheme == AppTheme.Light ? 0 : 1;
+            // Register routes for navigation
+            Routing.RegisterRoute("SignUpPage", typeof(CubHubApp.Pages.SignUpPage));
+            Routing.RegisterRoute("LoginPage", typeof(CubHubApp.Pages.LoginPage));
+            // Navigate to SignupPage once the Shell is ready
+            // Navigate to SignupPage on launch
+            GoToAsync($"//{nameof(SignUpPage)}");
         }
         public static async Task DisplaySnackbarAsync(string message)
         {

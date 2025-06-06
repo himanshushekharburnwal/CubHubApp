@@ -26,6 +26,9 @@
         ContentTemplate="{DataTemplate pages:ManageMetaPage}"
         Route="manage" />
 
+    <ShellContent Title="Sign Up" ContentTemplate="{DataTemplate pages:SignUpPage}" Route="SignUpPage" />
+
+
     <Shell.FlyoutFooter>
         <Grid Padding="15">
             <sf:SfSegmentedControl x:Name="ThemeSegmentedControl" 

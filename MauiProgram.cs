@@ -1,4 +1,6 @@
 ﻿using CommunityToolkit.Maui;
+using CubHubApp.Services.Implementations;
+using CubHubApp.Services.Interfaces;
 using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Toolkit.Hosting;
 
@@ -41,6 +43,14 @@ namespace CubHubApp
 
             builder.Services.AddTransientWithShellRoute<ProjectDetailPage, ProjectDetailPageModel>("project");
             builder.Services.AddTransientWithShellRoute<TaskDetailPage, TaskDetailPageModel>("task");
+
+
+            //Coded 
+            // 🔌 Register Services
+            builder.Services.AddSingleton<IDataBaseService, DatabaseService>();
+            builder.Services.AddSingleton<INavigationService, NavigationService>();
+
+
 
             return builder.Build();
         }
